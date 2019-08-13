@@ -5,7 +5,18 @@ import "./App.css";
 
 function App() {
   const inputRef = useRef();
-  const [items, dispatch] = useReducer((state, action) => state, []);
+  const [items, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case "add":
+        return [
+          ...state,
+          {
+            id: Date.now(),
+            name: action.name
+          }
+        ];
+    }
+  }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -26,7 +37,7 @@ function App() {
       </form>
       <ul>
         {items.map(item => (
-          <li key={item.id}>{item.nam}</li>
+          <li key={item.id}>{item.name}</li>
         ))}
       </ul>
       {/* <TodoForm />
