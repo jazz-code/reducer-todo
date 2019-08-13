@@ -15,6 +15,8 @@ function App() {
             name: action.name
           }
         ];
+      default:
+        return state;
     }
   }, []);
 
@@ -36,8 +38,18 @@ function App() {
         <input ref={inputRef} />
       </form>
       <ul>
-        {items.map(item => (
-          <li key={item.id}>{item.name}</li>
+        {items.map((item, index) => (
+          <li key={item.id}>
+            {item.name}
+            <button
+              onClick={
+                //dispatch an action called "remove" at the index of the item
+                () => dispatch({ type: "remove", index })
+              }
+            >
+              X
+            </button>
+          </li>
         ))}
       </ul>
       {/* <TodoForm />
