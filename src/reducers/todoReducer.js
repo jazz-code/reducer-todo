@@ -1,5 +1,5 @@
-export const initalState = {
-  Todos: [
+export const initialState = {
+  todos: [
     {
       item: "Learn about reducers",
       completed: false,
@@ -9,7 +9,15 @@ export const initalState = {
 };
 
 export const todoReducer = (state, action) => {
-  console.log("todoReducer", state, action);
-
-  return state;
+  //   console.log("todoReducer", state);
+  switch (action.type) {
+    case "DISPLAY_TODO":
+      return {
+        ...state,
+        item: action.item
+      };
+      console.log("state", state.item);
+    default:
+      return state;
+  }
 };
