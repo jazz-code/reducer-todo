@@ -15,6 +15,8 @@ function App() {
             name: action.name
           }
         ];
+      case "remove":
+        return state.filter((item, index) => index != action.index);
       default:
         return state;
     }
