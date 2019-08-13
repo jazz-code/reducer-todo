@@ -1,7 +1,11 @@
 export const initalState = {
-  item: "Learn about reducers",
-  completed: false,
-  id: 3892987589
+  Todos: [
+    {
+      item: "Learn about reducers",
+      completed: false,
+      id: 3892987589
+    }
+  ]
 };
 
 export const todoReducer = (state, action) => {
