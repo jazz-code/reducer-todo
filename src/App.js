@@ -36,8 +36,10 @@ function App() {
 
   return (
     <div className="App">
+      Add a Todo
       <form onSubmit={handleSubmit}>
-        <input ref={inputRef} />
+        <input ref={inputRef} placeholder="Enter a Todo" />
+        <button>Submit</button>
       </form>
       <ul>
         {items.map((item, index) => (
