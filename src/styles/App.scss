@@ -7,7 +7,7 @@ body {
 .App {
   text-align: center;
   margin: 21px auto;
-  background-color: #1F2833;
+  background-color: rgb(49, 61, 77);
   width: 61%;
   height: 37rem;
   border-radius: 15px;
@@ -16,14 +16,16 @@ body {
     margin: 20px auto;
     padding-top: 10px;
     font-size: 32px;
+    text-shadow: -1px 2px 9px rgb(192, 179, 175);
     color: white;
+    font-family: 'Lexend Mega', sans-serif;
   }
 
     .form {
       padding: 5px 0;
       text-align: center;
       margin: 20px;
-      background-color: #45A29E;
+      background-color: rgb(68, 136, 131);
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       
@@ -36,6 +38,7 @@ body {
         border-bottom: 10px solid #66FCF1;
         background-color: #3CBC8D;
         color: white;
+        font-family: 'Lexend Mega', sans-serif;
       }
   }
 
@@ -43,30 +46,39 @@ body {
       // width: 100%;
       // background-color: red;
       list-style: none;
+
       .list-item {
-        text-align: right;
+        display: flex;
+        justify-content: space-between;
         border: 2px solid #45A29E;
         border-radius: 10px;
         margin: 10px auto;
-        width: 40%;
-        background-color: #66FCF1;
+        width: 80%;
+        background-color: #3CBC8D;
+        font-family: 'Lexend Mega', sans-serif;
+        color: white;
+        font-size: 24px;
+        padding: 5px;
+        padding-left: 23px;
+        text-shadow: -1px 2px 9px rgb(192, 179, 175);
       }
     }
 
 
     .btn-submit{
-      padding: 5px 5px;
+      padding: 8px 8px;
       margin-left: 20px;
       border-radius: 5px;
-      width: 10%;
-      background-color: #66FCF1;
+      background-color: #45A29E;
+      font-family: 'Lexend Mega', sans-serif;
       cursor: pointer;
     }
     .btn-remove {
       margin-left: 65px;
-      padding: 5px 5px;
+      padding: 8px 8px;
       border-radius: 5px;
       background-color: #45A29E;
+      font-family: 'Lexend Mega', sans-serif;
       cursor: pointer;
     }
 
