@@ -1,0 +1,81 @@
+body {
+  box-sizing: border-box;
+  background-color: #0B0C10;
+  height: 80%;
+}
+
+.App {
+  text-align: center;
+  margin: 21px auto;
+  background-color: #1F2833;
+  width: 61%;
+  height: 37rem;
+  border-radius: 15px;
+
+  h1 {
+    margin: 20px auto;
+    padding-top: 10px;
+    font-size: 32px;
+    color: white;
+  }
+
+    .form {
+      padding: 5px 0;
+      text-align: center;
+      margin: 20px;
+      background-color: #45A29E;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      
+
+      .input {
+        border: 2px solid #66FCF1;
+        border-radius: 4px;
+        padding: 12px;
+        margin-left: 100px;
+        border-bottom: 10px solid #66FCF1;
+        background-color: #3CBC8D;
+        color: white;
+      }
+  }
+
+    .list {
+      // width: 100%;
+      // background-color: red;
+      list-style: none;
+      .list-item {
+        text-align: right;
+        border: 2px solid #45A29E;
+        border-radius: 10px;
+        margin: 10px auto;
+        width: 40%;
+        background-color: #66FCF1;
+      }
+    }
+
+
+    .btn-submit{
+      padding: 5px 5px;
+      margin-left: 20px;
+      border-radius: 5px;
+      width: 10%;
+      background-color: #66FCF1;
+      cursor: pointer;
+    }
+    .btn-remove {
+      margin-left: 65px;
+      padding: 5px 5px;
+      border-radius: 5px;
+      background-color: #45A29E;
+      cursor: pointer;
+    }
+
+}
+@keyframes btn-submit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useReducer, useRef } from "react";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
-import "./App.css";
+import "./styles/App.scss";
 
 function App() {
   const inputRef = useRef();
@@ -36,22 +36,23 @@ function App() {
 
   return (
     <div className="App">
-      Add a Todo
-      <form onSubmit={handleSubmit}>
-        <input ref={inputRef} placeholder="Enter a Todo" />
-        <button>Submit</button>
+      <h1>Make a to-do list!</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <input className="input" ref={inputRef} placeholder="Enter a Todo" />
+        <button className="btn-submit">Submit</button>
       </form>
-      <ul>
+      <ul className="list">
         {items.map((item, index) => (
-          <li key={item.id}>
+          <li className="list-item" key={item.id}>
             {item.name}
-            <button
+            <button 
+              className="btn-remove"
               onClick={
                 //dispatch an action called "remove" at the index of the item
                 () => dispatch({ type: "remove", index })
               }
             >
-              X
+              Delete
             </button>
           </li>
         ))}
